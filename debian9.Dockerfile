@@ -9,13 +9,13 @@ RUN apt-get update && \
 	rm -rf /var/lib/apt/lists/* && \
   mkdir -p /tool && \
 	cd /tool && \
-	wget https://github.com/informarte/yuck/releases/download/20180303/yuck-20180303.zip && \
-	unzip yuck-20180303.zip && \
-	rm yuck-20180303.zip && \
-	mv yuck-20180303 yuck && \
+	wget https://github.com/informarte/yuck/releases/download/20190601/yuck-20190601.zip && \
+	unzip yuck-20190601.zip && \
+	rm yuck-20190601.zip && \
+	mv yuck-20190601 yuck && \
 	cd yuck && \
 	ln -s bin/yuck fzn-yuck && \
-	mv mzn/ mzn-lib
+	mv mzn/lib/ mzn-lib
 	
 ENV PATH "$PATH:/tool/yuck/"
 
